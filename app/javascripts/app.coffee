@@ -16,6 +16,12 @@
 #
 # Your application begins here...
 
-Inbox = {}
+Inbox = Ember.Application.create
+  autoinit: false
 
 window.Inbox = Inbox
+
+require 'inbox/router'
+
+require 'inbox/controllers/application_controller'
+require 'inbox/views/application_view'

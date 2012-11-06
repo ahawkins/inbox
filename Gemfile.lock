@@ -15,6 +15,12 @@ GIT
       thor
 
 GIT
+  remote: git://github.com/radiumsoftware/iridium-ember.git
+  revision: 703ee49d572a48b34c0c2a8d297e2dfa735e3e50
+  specs:
+    iridium-ember (0.1.0)
+
+GIT
   remote: git://github.com/radiumsoftware/iridium.git
   revision: ba9dcdf90116daa41f71c5a3d2271f96840b31b9
   specs:
@@ -101,5 +107,6 @@ PLATFORMS
 DEPENDENCIES
   hydrogen!
   iridium!
+  iridium-ember!
   rake-pipeline!
   thor!

@@ -1,4 +1,5 @@
 require 'iridium'
+require 'iridium-ember'
 
 if defined?(Bundler) 
   Bundler.require :default, Iridium.env
@@ -10,6 +11,7 @@ class Inbox < Iridium::Application
   # all declared files
   #
   # config.dependencies.load :bootstrap
+  config.dependencies.load_after "ember-debug", "ember-data"
 
   # Specify a different place to load your templates. All templates
   # will be added to Javascript array specified here:

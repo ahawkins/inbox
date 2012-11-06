@@ -12,4 +12,4 @@
 # Your boot code begins here...
 
 require('inbox/app')
-Inbox.booted = true
+Inbox.initialize()
