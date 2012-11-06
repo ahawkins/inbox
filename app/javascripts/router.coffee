@@ -4,3 +4,8 @@ Inbox.Router = Ember.Router.extend
   root: Ember.Route.extend
     index: Ember.Route.extend
       route: '/'
+      connectOutlets: (router) ->
+        router.get('applicationController').connectOutlet
+          outletName: "list"
+          name: "messages"
+          context: Inbox.store.findAll(Inbox.Message)

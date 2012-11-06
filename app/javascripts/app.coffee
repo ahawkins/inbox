@@ -23,5 +23,14 @@ window.Inbox = Inbox
 
 require 'inbox/router'
 
+require 'inbox/store'
+
+require 'inbox/models/message'
+
 require 'inbox/controllers/application_controller'
+require 'inbox/controllers/messages_controller'
+
 require 'inbox/views/application_view'
+require 'inbox/views/messages_view'
+
+require 'inbox/fixtures'

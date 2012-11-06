@@ -3535,11 +3535,11 @@ DS.Model = Ember.Object.extend(Ember.Evented, {
 
     try {
       this._suspendedAssociations = true;
-      Ember._suspendObservers(self, observers, null, 'belongsToDidChange', function() {
-        Ember._suspendBeforeObservers(self, observers, null, 'belongsToWillChange', function() {
+      //Ember._suspendObservers(self, observers, null, 'belongsToDidChange', function() {
+        //Ember._suspendBeforeObservers(self, observers, null, 'belongsToWillChange', function() {
           callback.call(binding || self);
-        });
-      });
+        //});
+      //});
     } finally {
       this._suspendedAssociations = false;
     }
