@@ -1,3 +1,17 @@
-<h1>My Inbox</h1>
-{{outlet list}}
-{{outlet details}}
+<div class="container-fluid">
+  <div class="navbar navbar-fixed-top">
+    <section class="navbar-inner">
+      <a class="brand" href="#">Inbox</a>
+    </section>
+  </div>
+
+  <div class="row-fluid">
+    <section id="message-list" class="span3">
+      {{outlet list}}
+    </section>
+
+    <section id="main-pane" class="span7">
+      {{outlet details}}
+    </section>
+  </div>
+</div>
