@@ -1,9 +1,9 @@
 <ul>
 {{#each message in controller}}
   <li>
-    {{message.subject}}
+    <a {{action showMessage message href=true}}>{{message.subject}}</a>
     <br />
-    {{message.body}}
+    {{message.teaser}}
   </li>
 {{/each}}
 </ul>

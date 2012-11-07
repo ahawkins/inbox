@@ -29,8 +29,10 @@ require 'inbox/models/message'
 
 require 'inbox/controllers/application_controller'
 require 'inbox/controllers/messages_controller'
+require 'inbox/controllers/message_controller'
 
 require 'inbox/views/application_view'
 require 'inbox/views/messages_view'
+require 'inbox/views/message_view'
 
 require 'inbox/fixtures'
