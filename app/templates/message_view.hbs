@@ -1,5 +1,9 @@
-<h2>Individual Message</h2>
+{{#if content}}
+  <h2>Individual Message</h2>
 
-<strong>{{subject}}</strong>
+  <strong>{{subject}}</strong>
 
-<p>{{body}}</p>
+  <p>{{body}}</p>
+{{else}}
+  <p>Please select a message</p>
+{{/if}}

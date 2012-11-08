@@ -1,9 +1,13 @@
-<ul>
-{{#each message in controller}}
-  <li>
-    <a {{action showMessage message href=true}}>{{message.subject}}</a>
-    <br />
-    {{message.teaser}}
-  </li>
-{{/each}}
-</ul>
+{{#unless isUpdating}}
+  <ul>
+  {{#each message in controller}}
+    <li>
+      <a {{action showMessage message href=true}}>{{message.subject}}</a>
+      <br />
+      {{message.teaser}}
+    </li>
+  {{/each}}
+  </ul>
+{{else}}
+  <p>Loading...<p>
+{{/unless}}

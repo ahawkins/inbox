@@ -10,6 +10,9 @@ Inbox.Router = Ember.Router.extend
           outletName: "list"
           name: "messages"
           context: Inbox.store.findAll(Inbox.Message)
+        router.get('applicationController').connectOutlet
+          outletName: "details"
+          name: "message"
 
       showMessage: Ember.Route.transitionTo('showingMessage')
 
@@ -19,10 +22,7 @@ Inbox.Router = Ember.Router.extend
       showingMessage: Ember.Route.extend
         route: '/:id'
         connectOutlets: (router, context) ->
-          router.get('applicationController').connectOutlet
-            outletName: "details"
-            name: "message"
-            context: context
+          router.get('messageController').set('content', context)
         serialize: (router, context) ->
           id: context.get('id')
         deserialize: (router, urlParams) ->
