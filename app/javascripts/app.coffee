@@ -34,5 +34,6 @@ require 'inbox/controllers/message_controller'
 require 'inbox/views/application_view'
 require 'inbox/views/messages_view'
 require 'inbox/views/message_view'
+require 'inbox/views/filters_view'
 
 require 'inbox/fixtures'

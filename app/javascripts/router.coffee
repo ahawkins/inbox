@@ -13,6 +13,10 @@ Inbox.Router = Ember.Router.extend
         router.get('applicationController').connectOutlet
           outletName: "details"
           name: "message"
+        router.get('applicationController').connectOutlet
+          outletName: "filters"
+          viewClass: Inbox.FiltersView
+          controller: "messages"
 
       showMessage: Ember.Route.transitionTo('showingMessage')
 
