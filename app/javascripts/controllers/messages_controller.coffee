@@ -1,6 +1,7 @@
 Inbox.MessagesController = Ember.ArrayController.extend
   selectedFilter: "all"
   isUpdatingBinding: 'content.isUpdating'
+  messagesBinding: 'arrangedContent'
   arrangedContent: Ember.computed('content', 'selectedFilter', ->
     content = @get('content')
 

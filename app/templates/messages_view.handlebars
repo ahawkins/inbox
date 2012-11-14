@@ -1,6 +1,6 @@
 {{#unless isUpdating}}
   <ul>
-  {{#each message in arrangedContent}}
+  {{#each message in messages}}
     <li>
       <a {{action showMessage message href=true}}>{{message.subject}}</a>
       <br />
