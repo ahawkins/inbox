@@ -1,8 +1,10 @@
-{{#view Ember.RadioButtonGroup name="filter" value="selectedFilter"}}
-  {{#each parentView.filters}}
-    <label>
-      {{unbound label}}
-      {{view Ember.RadioButton value="value"}}
-    </label>
-  {{/each}}
-{{/view}}
+<form class="navbar-form pull-left form-inline">
+  {{#view Inbox.FilterRadioButtonGroup valueBinding="selectedFilter"}}
+    {{#each filters}}
+      <label>
+        {{label}}
+        {{view view.RadioButton value=value}}
+      </label>
+    {{/each}}
+  {{/view}}
+</form>
