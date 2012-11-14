@@ -1,10 +1,11 @@
 Inbox.MessagesController = Ember.ArrayController.extend
   selectedFilter: "all"
   isUpdatingBinding: 'content.isUpdating'
-  filteredContent: (->
-    switch @get('selectedFilter')
-      when 'received' then @filterProperty('sent', false)
-      when 'sent' then @filterProperty('sent')
-      else @get('arrangedContent')
-  ).property('selectedFilter')
+  arrangedContent: Ember.computed('content', 'selectedFilter', ->
+    content = @get('content')
 
+    switch @get('selectedFilter')
+      when 'received' then content.filterProperty('sent', false)
+      when 'sent' then content.filterProperty('sent')
+      else content
+  )
